@@ -1,5 +1,4 @@
 # myMacVimConfig
-.vimrc
 
 It is my Vim configuration, using Vundle to manage plug-ins.
 
@@ -22,7 +21,7 @@ Installation
 4. start vim
    :BundleInstall in cmd mode
 
-5. compile YCM according its mannul.
+5. compile YCM according its manual.
 
 
 Enjoy it!
