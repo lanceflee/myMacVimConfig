@@ -1,0 +1,2 @@
+# myMacVimConfig
+.vimrc
