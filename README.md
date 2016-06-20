@@ -7,9 +7,7 @@ It is tested under MacOS X 10.11 and  MacVim from HomeBrew.
 The github repository is used for my backup, maybe not update timely. 
 
 ---------------------------------------------
-Installation
-
-
+1.Installation
 --------
 1. git clone https://github.com/lanceflee/myMacVimConfig.git
 
@@ -25,5 +23,7 @@ Installation
 
 
 Enjoy it!
+
+----
 
 

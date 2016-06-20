@@ -1,6 +1,8 @@
 "Voundle area
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
@@ -28,6 +30,10 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'sjl/gundo.vim'
 Bundle 'Lokaltog/vim-powerline'
+"markdown plugin
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
+call vundle#end()
 
 filetype plugin indent on
 syntax  enable
@@ -44,7 +50,7 @@ set number
 set cursorline
 set cursorcolumn
 set hlsearch
-set mouse=nvh
+set mouse=
 
 "color template and background
 set background=dark
@@ -205,8 +211,8 @@ nmap <Leader>gp :cp<cr>
 "use supertab to make YCM and utilsinp work together ^_^
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:UltiSnipsExpandTrigger = '<Tab>'
 let g:ultisnips_java_brace_style = "nl"
+"let g:UltiSnipsSnippetDirectories = "~/.vim/bundle/ultisnips/mysnip"
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "scrooloose/nerdcommente :
@@ -215,3 +221,12 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "Gundo
 nnoremap <Leader>u :GundoToggle<CR>
+
+"markdown
+let g:vim_markdown_frontmatter=1
+let g:vim_markdown_math=1
+
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
